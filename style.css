@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.wavy
+{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.wavy::before
+{
+    content: 'aaaaaaa aaaaaa';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 5em;
+    color: transparent;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 8px;
+    text-decoration-color: #4c2d86; 
+    white-space: nowrap;
+    animation: flow 1.5s linear infinite; 
+}
+
+@keyframes flow
+{
+    from{ transform: translateX(-1px)}
+    to{ transform: translateX(-70px);}
+}
