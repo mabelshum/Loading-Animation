@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squiggle Animation</title>
+    <title>Faded Squiggle Animation</title>
     <style>
         .waveContainer {
             width: 100px;
@@ -24,7 +24,7 @@
             mask: url(#waveMask);
             animation: 
             wave-move 1s linear infinite, 
-            dash-shift 1s linear infinite;
+            dash-shift 1s linear infinite; 
         }
 
         @keyframes wave-move { 
@@ -44,9 +44,10 @@
             <defs>
 
                 <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stop-color="#4c2d86"/>
-                    <stop offset="40%" stop-color="#9045a0"/>
-                    <stop offset="80%" stop-color="#bb6bd9"/>
+                    <stop offset="0%" stop-color="#ffffff00"/>
+                    <stop offset="40%" stop-color="#bb6bd9"/>
+                    <stop offset="70%" stop-color="#9045a0"/>
+                    <stop offset="80%" stop-color="#4c2d86"/>
                 </linearGradient>
 
                 <mask id="waveMask">
